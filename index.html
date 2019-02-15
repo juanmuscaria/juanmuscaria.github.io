@@ -2,7 +2,6 @@
 	<head>
 		<script type="text/javascript" src="js/teste.js"></script>
 		<title>juanmuscaria</title>
-		<meta property="og:type" content="website" />
 		<script type="text/javascript">
 			var mTitle = getUrlParameter(document.URL, "title");
 			var mContent = getUrlParameter(document.URL, "content");
@@ -15,7 +14,11 @@
 			eTitle.setAttribute("content", mTitle);
 			eContent.setAttribute("property", "og:description");
 			eContent.setAttribute("content", mContent);
+			var mType = document.createElement('meta');
+			mType.setAttribute("property", "og:type");
+			mType.setAttribute("content", "website");
 			body.appendChild(eTitle);
+			body.appendChild(mType);
 			body.appendChild(eContent);
 		</script>
 		<!--
