@@ -1,9 +1,22 @@
 <html prefix="og: http://ogp.me/ns#">
-<head>
-<title>Teste</title>
-<meta property="og:title" content="Quem precisa de bots para Message Embeds" />
-<meta property="og:type" content="website" />
-<meta property="og:description" content="sendo que tem como usar html para isso?" />
-<meta property="og:description" content="Eu realmente sou um genio." />
-</head>
+	<head>
+		<script type="text/javascript" src="js/teste.js"></script>
+		<title>juanmuscaria</title>
+		<script type="text/javascript">
+			var mTitle = getUrlParameter(document.URL, "title");
+			if (mTitle == "")mTitle = "Titulo"
+			var body = document.getElementsByTagName('head')[0];
+			var eTitle = document.createElement('meta');
+			eTitle.setAttribute("property", "og:title");
+			eTitle.setAttribute("content", mTitle);
+			body.appendChild(eTitle);
+		</script>
+		<!--
+		<meta property="og:title" content="Quem precisa de bots para Message Embeds" />
+		<meta property="og:type" content="website" />
+		<meta property="og:description" content="sendo que tem como usar html para isso?" />
+		<meta property="og:description" content="Eu realmente sou um genio." />
+		--->
+	</head>
+
 </html>
